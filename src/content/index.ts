@@ -38,7 +38,6 @@ function handlePumpCard(card: HTMLElement) {
 
 export function render() {
   const pumpCardWrapper = document.querySelector('main div.grid.min-h-screen')!
-
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.addedNodes.length > 0) {

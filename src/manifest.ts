@@ -7,7 +7,6 @@ export default defineManifest({
   version: pkg.version,
   description: pkg.description,
   homepage_url: 'https://github.com/holazz/bullx-boost',
-  permissions: ['webRequest'],
   host_permissions: ['https://bullx.io/pump-vision'],
   action: {
     default_icon: 'src/assets/icon.png',
@@ -17,7 +16,7 @@ export default defineManifest({
       all_frames: false,
       matches: ['https://bullx.io/pump-vision'],
       js: ['src/content/index.ts'],
-      run_at: 'document_idle',
+      run_at: 'document_end',
     },
   ],
   web_accessible_resources: [
