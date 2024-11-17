@@ -1,0 +1,30 @@
+{
+  "name": "bullx-boost",
+  "displayName": "Bullx Boost",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Bullx Boost",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "pack": "vite build && crx pack dist -o ./dist/extension.crx",
+    "start": "web-ext run --source-dir ./dist --target=chromium",
+    "lint": "eslint .",
+    "release": "bumpp --commit --push --tag"
+  },
+  "dependencies": {
+    "@crxjs/vite-plugin": "^1.0.14"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.283",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@crxjs/vite-plugin": "patches/@crxjs__vite-plugin.patch"
+    }
+  }
+}
